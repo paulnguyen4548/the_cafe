@@ -72,11 +72,11 @@
         <h1>The Menu</h1>
 		<div class="menu-title">
 			<div class="btntitle">
-				<a href="#">Eat</a>
-				<a href="">Drink</a>
+				<div id="choose_eat" class="btntitle_eat btntitle_choose" onclick= "menueat()"> Eat</div>
+				<div id="choose_drink" class="btntitle_drink" onclick= "menudrink()">Drink</div>
 			</div>	
 			<div class="menu-list">
-					<ul class="eat-list">
+					<ul id="choose_menu_eat" class="eat-list showmenu" >
 						<li>	
 							<p class ="foodname">Bread Basket</p>
 							<p class ="food-decrition">Assortment of fresh baked fruit breads and muffins 5.50
@@ -104,7 +104,7 @@
 						</li>
 						
 					</ul>		
-					<ul class="drink-list">					
+					<ul id="choose_menu_drink" class="drink-list">					
 						<li>	
 							<p class ="foodname">Coffee</p>
 							<p class ="food-decrition">Regular coffee 2.50
@@ -158,11 +158,11 @@
 						
 		</ul>	
 		<form class="booking">
-			<input type="number" class="book-quantity" name="quantity" min="1" max="1000" placeholder="How many people"><br><br>
+			<input type="number" id="booking_qty" class="book-quantity" name="quantity" min="1" max="1000" placeholder="How many people"><br><br>
 					
 			<input type="datetime-local" class="book-date" value="2021-11-19T19:30"><br><br>
-			<input type="text" class="book-message" placeholder="Message \ Special requirements"><br><br>
-			<button type="button" class="book-btn" onclick="alert('Thanh Cong')">Send Message</button>
+			<input type="text" id="booking_message" class="book-message" placeholder="Message \ Special requirements"><br><br>
+			<button type="button" class="book-btn" onclick = resetInput()>Send Message</button>
 
 		</form>
     
@@ -171,5 +171,28 @@
 		<h1>	This is PaulNguyen's first website </h1>
 		<a href="https://facebook.com/quocuy4548" class="fa fa-facebook"></a>
 	</div>
+ 
+		 <script>
+			
+			function menueat(){
+					document.getElementById("choose_eat").classList.add("btntitle_choose");
+					document.getElementById("choose_drink").classList.remove("btntitle_choose");
+					document.getElementById("choose_menu_eat").classList.add("showmenu");
+					document.getElementById("choose_menu_drink").classList.remove("showmenu");
+			}
+			function menudrink(){
+					document.getElementById("choose_drink").classList.add("btntitle_choose");
+					document.getElementById("choose_eat").classList.remove("btntitle_choose");
+					document.getElementById("choose_menu_drink").classList.add("showmenu");
+					document.getElementById("choose_menu_eat").classList.remove("showmenu");	
+			}
+			function resetInput(){
+				document.getElementById("booking_qty").value = "";
+				document.getElementById("booking_message").value = "";
+				alert("Successful booking !")
+			}
+			
+			
+		 </script>
 
 </body>
