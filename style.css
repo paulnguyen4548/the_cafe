@@ -178,33 +178,31 @@
 		border-style:	ridge;
 }
 #the-menu .menu-title .btntitle{
-	width: 95.42858%;
+	width: 100%;
+	box-sizing: border-box;
 	display: inline-flex;	
 	padding: 10px 16px;
 	text-align: center;
 	box-shadow:2px 2px 8px rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
-
-	
-	
-	
 }
-#the-menu .menu-title a{
+
+
+
+.btntitle_eat,.btntitle_drink{
 	width: 50%;
 	display: inline-block;
-	padding: 0 16px;
+	padding: 6px 16px;
 	text-decoration:none;
-	color:red;
+	color: black;
 	font-size: 18px;
     font-family: "Inconsolata", sans-serif;
-	
+}
 
+.btntitle_choose{
+	color: white !important;
+	background-color: black;
 }
-#the-menu .menu-title a:active + .drink-list{
-	background-color:black;
-	color:white;
-	display:block;
-	
-}
+
 #the-menu .menu-list{
 
 	position:relative;
@@ -220,6 +218,7 @@
     font-family: "Inconsolata", sans-serif;
 	padding: 0 15px;
 }
+
 .eat-list li{
 	
 	padding: 20px 0;
@@ -233,8 +232,25 @@
 	
 	color: #757575;
 }
-.drink-list{display:none;}
 
+.drink-list li{
+	
+	padding: 20px 0;
+	
+}
+.drink-list .foodname{
+	
+	color: black;
+}
+.drink-list .food-decrition{
+	
+	color: #757575;
+}
+.drink-list{display:none}
+.eat-list{display:none}
+.showmenu{
+	display:block;
+}
 
 
 .image-food{
@@ -286,6 +302,9 @@
 .where-info .where-img{
 	background: url("./image/map.jpg") center /cover no-repeat;
 	height: 300px;
+}
+.where-img {
+    margin-bottom: 8px;
 }
 
 .where-info .FYI {
