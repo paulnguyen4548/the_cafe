@@ -300,8 +300,11 @@
 	
 }
 .where-info .where-img{
-	background: url("./image/map.jpg") center /cover no-repeat;
+	
 	height: 300px;
+}
+.where-img > iframe{
+	width: 100%;
 }
 .where-img {
     margin-bottom: 8px;
@@ -328,7 +331,6 @@
     padding-right: 8px;
 	font-size:18px;
 	font-family: "Inconsolata", sans-serif;
-	box-sizing: border-box;
 }
 .booking .book-btn{
 	width;140px;
@@ -355,4 +357,19 @@
 	text-decoration: none;
 	font-size: 24px;
 	padding-top: 20px;
+}
+.footer-socical {
+	
+    width:	100%;
+    text-align: center;
+    font-size: 22px;
+}
+.footer-socical a{
+    text-decoration: none;
+    padding:16px;
+    color: black;
+}
+.footer-socical a:hover{
+    background-color: #ccc;
+    color: black;
 }
