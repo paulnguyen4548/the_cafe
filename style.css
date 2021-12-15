@@ -332,6 +332,7 @@
     padding-right: 8px;
 	font-size:18px;
 	font-family: "Inconsolata", sans-serif;
+	box-sizing: border-box;
 }
 .booking .book-btn{
 	width;140px;
